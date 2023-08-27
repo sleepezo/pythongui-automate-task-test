@@ -1,3 +1,24 @@
+import pyautogui
+print(pyautogui.position())
+
+#close the vscode : run  1 time
+pyautogui.moveTo(1776, 15)
+pyautogui.click()
+pyautogui.PAUSE = 1
+
+#open 1st tab: open drive if needed
+pyautogui.moveTo(75, 27)
+pyautogui.click()
+pyautogui.PAUSE = 1
+
+## INITIATION SETUP 2nd tab
+pyautogui.moveTo(425, 27)
+pyautogui.click()
+pyautogui.moveTo(341,417)
+pyautogui.click()
+
+##############################################
+#start to repeat # not yet
 for i in range(70):
     #open 2nd tab: open the gsheet (finalized sheet)//repeating
     pyautogui.moveTo(425, 27)
