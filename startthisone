@@ -1,0 +1,99 @@
+for i in range(70):
+    #open 2nd tab: open the gsheet (finalized sheet)//repeating
+    pyautogui.moveTo(425, 27)
+    pyautogui.click()
+    pyautogui.PAUSE = 1
+    #copy the name of company
+    pyautogui.press('enter')
+    pyautogui.hotkey('ctrl', 'a')
+    pyautogui.hotkey('ctrl', 'c')
+    pyautogui.PAUSE = 1
+
+    #open 3rd tab:  sample to copy
+    pyautogui.moveTo(721, 27)
+    pyautogui.click()
+    pyautogui.PAUSE = 1
+
+    #click file on doc: to edit name
+    pyautogui.moveTo(95, 155)
+    pyautogui.click()
+    pyautogui.PAUSE = 1
+    pyautogui.press('down', presses=3)
+    pyautogui.press('enter')
+    pyautogui.press('backspace')
+    pyautogui.write('Sponsorship Letter ')
+    #paste the name of company
+    pyautogui.hotkey('ctrl', 'shift', 'v')
+    pyautogui.press('enter')
+    #wait depend on screen to load
+    pyautogui.PAUSE = 15
+
+    #confirming the 4th tab
+    pyautogui.moveTo(1086, 15)
+    pyautogui.click()
+    pyautogui.PAUSE = 1
+
+    #change Forfit to company name
+    pyautogui.hotkey('ctrl', 'f')
+    pyautogui.press('backspace')
+    pyautogui.write('Forfit')#to change
+    pyautogui.press('tab')
+    pyautogui.press('enter')
+    pyautogui.press('tab')
+    pyautogui.hotkey('ctrl', 'shift', 'v')#to change
+    pyautogui.press('tab', presses=6)
+    pyautogui.press('enter')
+    pyautogui.press('esc')
+    pyautogui.PAUSE = 1
+    #reset page position#added
+    pyautogui.press('pageup')
+    pyautogui.press('esc')
+    pyautogui.press('esc')
+
+    #then copy address in gsheet
+    #open 2nd tab: open the gsheet
+    pyautogui.moveTo(425, 27)
+    pyautogui.click()
+    pyautogui.PAUSE = 1
+    #find address position 6 tab
+    pyautogui.press('tab', presses=6)
+    pyautogui.press('enter')
+    pyautogui.hotkey('ctrl', 'a')
+    pyautogui.hotkey('ctrl', 'c') 
+    pyautogui.PAUSE = 1
+    pyautogui.press('esc')
+    #go back to copy position for next
+    pyautogui.keyDown('shift')
+    pyautogui.press('tab', presses=6)
+    pyautogui.keyUp('shift')
+    #the next
+    pyautogui.press('down')
+    pyautogui.PAUSE = 1
+
+    #go back to editing tab: 4 to paste copied
+    #confirming the 4th tab
+    pyautogui.moveTo(1086, 15)
+    pyautogui.click()
+    pyautogui.PAUSE = 1
+    #check postion
+    pyautogui.moveTo(478, 386)
+    pyautogui.click()
+    pyautogui.PAUSE = 1
+    #selecting to change
+    pyautogui.press('down', presses= 5)
+    pyautogui.PAUSE = 1
+    pyautogui.keyDown('shiftleft')
+    pyautogui.keyDown('shiftright')
+    pyautogui.press('down', presses= 4)
+    pyautogui.keyUp('shiftleft')
+    pyautogui.keyUp('shiftright')
+    pyautogui.PAUSE = 1
+    pyautogui.hotkey('ctrl', 'shift', 'v')
+    pyautogui.PAUSE = 1
+
+    #close curent tab
+    pyautogui.hotkey('ctrl', 'w')
+    # #open 1st tab: open drive if needed
+    # pyautogui.moveTo(75, 27)
+    # pyautogui.click()
+    pyautogui.PAUSE = 5
